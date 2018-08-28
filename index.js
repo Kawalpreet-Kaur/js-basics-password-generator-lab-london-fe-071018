@@ -85,7 +85,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
   else recentlyGenerated[recentlyGenerated.length]=suggestedPassword;
   // return suggestedPassword;
   console.log('suggestedPassword=',suggestedPassword);
-  document.getElementById('result').innerHTML=suggestedPassword;
+ let shuffle = suggestedPassword => {
+  for (let i = suggestedPassword.length, j = Math.floor(Math.random() * --i); i; j = Math.floor(Math.random() * --i)) [arr[i], arr[j]] = [arr[j], arr[i]]
+  return arr;
+}
+  
+  document.getElementById('result').innerHTML=shuffle;//suggestedPassword;
 }
 );
   }
