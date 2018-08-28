@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       };});
       if (newPassword.length>0)
         newPassword=[];
-      else
+      else if (newPassword.length===0  && suggestedPassword.length===passwordLen)
       newPassword=suggestedPassword;
     }
     console.log('suggestedPassword=',suggestedPassword);
