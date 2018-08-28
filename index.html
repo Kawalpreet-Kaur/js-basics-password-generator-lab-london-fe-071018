@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <script type="text/javascript" src="index.js"></script>
   <title>Password Generator</title>
 </head>
 <body>
@@ -13,8 +14,13 @@
     <h1>Secure Password Generator</h1>
 
 
-    <form action="">
+    <form action="" >
       <!--Add HTML here-->
+      <label for="passwordLen">Enter Password length</label>
+      <input type="number" min="4" name="passwordLen" id ="passwordLen" required>
+      <br>
+      <input type="submit" id="submit" value="Get Password">
+
     </form>
 
 
