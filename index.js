@@ -73,8 +73,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         if (element===suggestedPassword){
         return suggestedPassword;
       };});
-      if (newPassword.length>0)
+      if (newPassword.length>0 || suggestedPassword.length!=passwordLen){
         newPassword=[];
+      }
       else if (newPassword.length===0  && suggestedPassword.length===passwordLen)
       newPassword=suggestedPassword;
     }
